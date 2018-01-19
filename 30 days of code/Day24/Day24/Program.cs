@@ -28,32 +28,28 @@ namespace Day24
 
         static void levelOrder(Node root)
         {
-            if (isRoot)
+            Queue<Node> queue = new Queue<Node>();
+
+            if (root != null)
             {
-                Console.Write("{0} ", root.data);
-                isRoot = false;
+                queue.Enqueue(root);
             }
 
-            if (root.left != null) {
-                Console.Write("{0} ", root.left.data);
+            while (queue.Count != 0) {
+
+                Node temp = queue.Dequeue();
+
+                Console.Write("{0} ", temp.data);
+
+                if (temp.left != null) {
+                    queue.Enqueue(temp.left);
+                }
+
+                if (temp.right != null) {
+                    queue.Enqueue(temp.right);
+                }
+                
             }
-
-            if (root.right != null)
-            {
-                Console.Write("{0} ", root.right.data);
-            }
-
-            if (root.left != null)
-            {
-                levelOrder(root.left);
-            }
-
-            if (root.right != null)
-            {
-                levelOrder(root.right);
-            }
-
-
         }
 
         static Node insert(Node root, int data)
