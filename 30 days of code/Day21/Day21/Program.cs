@@ -46,7 +46,7 @@ namespace Day21
             }
         }
 
-        static void Main(string[] args)
+        static void Main()
         {
             int n = Convert.ToInt32(Console.ReadLine());
             string[] a_temp = Console.ReadLine().Split(' ');
@@ -57,6 +57,7 @@ namespace Day21
             Console.WriteLine("Array is sorted in {0} swaps.", numberOfSwaps);
             Console.WriteLine("First Element: {0}", a[0]);
             Console.WriteLine("Last Element: {0}", a[a.Length - 1]);
+            Console.ReadKey();
         }
     }
 }
