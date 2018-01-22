@@ -1,23 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
+using MyLibrary;
 
 namespace Day29
 {
-    class Entry : IComparable<Entry>
-    {
-        public string FirstName { get; set; }
-        public string EmailID { get; set; }
-
-        public int CompareTo(Entry otherEntry)
-        {
-
-            return String.Compare(this.FirstName, otherEntry.FirstName);
-        }
-    }
-
     class Solution
     {
         static void DeleteNonGmailAccounts(List<Entry> list)
