@@ -45,6 +45,7 @@ namespace Plus_Minus
             Console.WriteLine(positiveNumbers / n);
             Console.WriteLine(negativeNumbers / n);
             Console.WriteLine(zeroes / n);
+            Console.Beep(37, 1);
             Console.ReadKey();
         }
     }
